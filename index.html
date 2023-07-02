@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Find last invoice</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Find last invoice</h1>
+    </div>
+    <div class="wrapper">
+      <div class="source-container">
+        <input
+          type="text"
+          id="source-folder"
+          placeholder="Invoice folder...."
+        />
+        <button class="open-source-file-browser">Select Folder...</button>
+      </div>
+
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="./assets/pfeil-nach-unten.png"
+          alt="Copy Master Logo"
+        />
+      </div>
+
+      <div class="destination-container">
+        <input
+          readonly
+          type="text"
+          id="last-invoice-file-name"
+          placeholder="Select invoice folder path first and click action button"
+        />
+      </div>
+      <div class="start-copy-container">
+        <button class="find-highest-file-num">Find highest file number</button>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="progress-bar-fill"></span>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

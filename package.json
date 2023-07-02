@@ -1,0 +1,41 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -mwl",
+    "dist": "NODE_ENV=production electron-builder",
+    "dist-mac": "NODE_ENV=production electron-builder --mac",
+    "dist-linux": "NODE_ENV=production electron-builder --linux",
+    "dist-windows": "NODE_ENV=production electron-builder --windows",
+    "dist-all": "NODE_ENV=production electron-builder --mac --linux --windows",
+    "electron:win:pack": "electron-packager . --platform=win32 --arch=x64 --overwrite --out=electron"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^21.2.3",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "@danieldietrich/copy": "^0.4.2",
+    "fs-extra": "^10.1.0"
+  },
+  "build": {
+    "appId": "m-f-coppier",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  }
+}
